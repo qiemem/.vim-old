@@ -25,8 +25,18 @@ Bundle 'reinh/vim-makegreen'
 Bundle 'vim-scripts/TaskList.vim'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'sontek/rope-vim'
+Bundle 'edsono/vim-matchit'
+"Bundle 'vim-scripts/taglist.vim'
+Bundle 'majutsushi/tagbar'
+"Bundle 'ervandew/python.vim--Vasiliev'
 
+"Bundle 'vim-scripts/javacomplete'
+Bundle 'cespare/vjde'
 
+" vim scripts plugins
+Bundle 'SearchComplete'
+Bundle 'bufkill.vim'
+Bundle 'json.vim'
 
 " Taking this from: http://www.vi-improved.org/vimrc.php
 
@@ -35,6 +45,7 @@ Bundle 'sontek/rope-vim'
 """
 filetype plugin indent on " detect filetype
 set history=1000 " How many lines of history to remember
+set columns=80
 set ffs=mac,unix,dos " support all three, in this order
 "set ofu=syntaxcomplete#Complete " Omnicomplete
 let g:SuperTabDefaultCompletionType = "context"
@@ -189,6 +200,11 @@ set grepprg=grep\ -nH\ $*
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+
+"""
+" JSON
+"""
+au! BufRead,BufNewFile *.json set filetype=json foldmethod=syntax 
 
 """
 " Tasklist

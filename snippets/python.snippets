@@ -1,6 +1,12 @@
 snippet pdb
 	import pdb; pdb.set_trace()
 
+snippet ipdb
+	import ipdb; ipdb.set_trace()
+
+snippet ipy
+	import IPython; IPython.Shell.IPShellEmbed()()
+
 snippet class
 	class ${1:ClassNamee}(${2:object}):
 		"""${3:docstring}"""
